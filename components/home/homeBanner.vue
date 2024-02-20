@@ -21,24 +21,7 @@
         </div>
 
         <div class="picture_banner">
-          <b-carousel
-            id="carousel-fade"
-            style="text-shadow: 0px 0px 2px #000"
-            fade
-          >
-            <b-carousel-slide
-              class="carousel_image"
-              img-src="/images/banking_banner.jpeg"
-            ></b-carousel-slide>
-            <b-carousel-slide
-              class="carousel_image"
-              img-src="/images/online_banking_banner.jpeg"
-            ></b-carousel-slide>
-            <b-carousel-slide
-              class="carousel_image"
-              img-src="/images/log_banking_banner.jpeg"
-            ></b-carousel-slide>
-          </b-carousel>
+          <img src="/images/banking_app.png" alt="">
         </div>
       </div>
     </div>
@@ -74,17 +57,11 @@ export default {}
 }
 
 .picture_banner {
-  width: 30%;
   overflow: hidden;
-  margin-top: 30px;
+  height: 100%;
 }
 
-.picture_banner > #carousel-fade {
-  width: 80%;
-}
-
-.carousel_image {
-  min-width: 250px;
-  min-height: 375px;
+.picture_banner > img {
+  height: 40vh;
 }
 </style>
