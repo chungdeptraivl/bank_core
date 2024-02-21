@@ -16,10 +16,10 @@
     </div>
 
     <!-- news -->
-    <div style="margin-top: 8vw;"><news-home /></div>
+    <div style="margin-top: 8vw"><news-home /></div>
 
     <!-- jumbotron -->
-    <div style="margin: 6vw 0;"><jumbotron-home /></div>
+    <div style="margin: 6vw 0"><jumbotron-home /></div>
   </div>
 </template>
 

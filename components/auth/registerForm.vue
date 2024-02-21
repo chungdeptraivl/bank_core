@@ -31,19 +31,16 @@
           <b-form-group label="Password" label-for="password">
             <b-form-input
               id="password"
-              type="password"
+              :type="passwordType"
               placeholder="Enter password"
               required
             ></b-form-input>
           </b-form-group>
 
-          <b-form-group label="Matching password" label-for="matchPassword">
-            <b-form-input
-              id="matchPassword"
-              type="password"
-              placeholder="Enter matching password"
-              required
-            ></b-form-input>
+          <b-form-group>
+            <b-form-checkbox v-model="showPassword">
+              Show password
+            </b-form-checkbox>
           </b-form-group>
 
           <b-form-group>
@@ -56,7 +53,7 @@
           <img
             src="/images/bank_register.png"
             alt="sing up image"
-            style="width: 100%; height: 100%; margin-top: 100px"
+            style="width: 100%; height: 100%; margin-top: 50px"
           />
           <a href="/Authentication/login_form" class="signup-image-link"
             >I am already member</a
@@ -68,7 +65,19 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      showPassword: false,
+    }
+  },
+
+  computed: {
+    passwordType() {
+      return this.showPassword ? 'text' : 'password'
+    },
+  },
+}
 </script>
 
 <style scoped>
@@ -78,7 +87,8 @@ export default {}
 
 .signup-content {
   display: flex;
-  flex-wrap: wrap; /* Thêm flex-wrap để các phần tử chuyển dòng khi không đủ không gian */
+  justify-content: center; /* Căn chỉnh các phần tử theo chiều ngang vào giữa */
+  align-items: center; /* Thêm flex-wrap để các phần tử chuyển dòng khi không đủ không gian */
 }
 
 .signup-form {
@@ -89,11 +99,12 @@ export default {}
 
 .signup-image {
   flex: 1; /* Sử dụng flex để phần ảnh mở rộng khi không có form */
-  margin-top: 45px;
+  margin-top: 30px;
 }
 
 .form-title {
   margin-bottom: 33px;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -117,8 +128,8 @@ figure {
   text-align: center;
 }
 
-/* Điều chỉnh layout khi màn hình nhỏ hơn 768px */
-@media screen and (max-width: 768px) {
+/* Điều chỉnh layout khi màn hình nhỏ hơn 1024px */
+@media screen and (max-width: 1024px) {
   .signup-content {
     flex-direction: column; /* Chuyển sang layout dọc */
   }

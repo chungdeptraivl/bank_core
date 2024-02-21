@@ -2,15 +2,16 @@
   <div class="wrapper">
     <div class="container">
       <div class="banner_content">
+        <div class="picture_banner">
+          <img class="banner-image" src="/images/card_jumbotron.jpeg" />
+        </div>
         <div class="open_account">
-          <h5>CT CREDIT CHECHING ACCOUNTS</h5>
+          <h5>LIFE AND MONEY BY CITI</h5>
           <h1>
-            Open. Deposit. <br />
-            Earn $300.
+            Closing the Racial Wealth Gap
           </h1>
           <p>
-            Earn a bonus when you open an eligible checking account with
-            Enhanced Direct Deposits & required activities.
+            These are some keys to help create equitable pathways to income growth.
           </p>
 
           <b-button
@@ -19,53 +20,21 @@
             >Learn more</b-button
           >
         </div>
-
-        <div class="picture_banner">
-          <img
-            v-for="(image, index) in images"
-            :key="index"
-            :src="image.src"
-            :style="{
-              display: index === currentImageIndex ? 'block' : 'none',
-            }"
-            class="banner-image"
-          />
-        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      currentImageIndex: 0,
-      images: [
-        { src: '/images/banking_app.png' },
-        { src: '/images/banking_app2.png' },
-        { src: '/images/banking_app3.png' },
-        { src: '/images/banking_app4.png' },
-      ],
-    }
-  },
-  mounted() {
-    setInterval(this.changeImage, 3000)
-  },
-  methods: {
-    changeImage() {
-      this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length
-    },
-  },
-}
+export default {}
 </script>
 
 <style scoped>
 .wrapper {
   width: 100vw;
   height: auto;
-  background-image: url('/images/bgr_banner.jpeg');
-  padding: 0 0 40px 0;
+  background-color: #c5e4f3;
+  padding: 40px 0;
 }
 
 .container {
@@ -88,6 +57,7 @@ export default {
 .picture_banner {
   overflow: hidden;
   height: 100%;
+  border-radius: 16px;
 }
 
 .banner-image {

@@ -112,8 +112,8 @@ figure {
   text-align: center;
 }
 
-/* Điều chỉnh layout khi màn hình nhỏ hơn 768px */
-@media screen and (max-width: 768px) {
+/* Điều chỉnh layout khi màn hình nhỏ hơn 1024px */
+@media screen and (max-width: 1024px) {
   .signup-content {
     flex-direction: column; /* Chuyển sang layout dọc */
   }

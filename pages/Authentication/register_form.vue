@@ -9,9 +9,7 @@
       transition: opacity 0.3s ease-in-out;
     "
   >
-    <div
-      class="p-4"
-    >
+    <div class="p-4">
       <register-form />
     </div>
   </div>
@@ -26,3 +24,4 @@ export default {
 </script>
 
 <style></style>
+ 
